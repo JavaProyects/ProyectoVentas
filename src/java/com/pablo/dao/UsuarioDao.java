@@ -2,9 +2,9 @@
 package com.pablo.dao;
 
 import com.pablo.model.Usuario;
-import com.pablo.services.VentasCervice;
+import com.pablo.services.VentasService;
 
-public class UsuarioDao extends VentasCervice<Usuario>{
+public class UsuarioDao extends VentasService<Usuario>{
 
     @Override
     public Usuario findVenta(String q) {

@@ -24,7 +24,7 @@ public class LoginController implements Serializable {
     }
 
     public String login() {
-        FacesMessage message=null;
+        FacesMessage message = null;
         String ruta = null;
         final String query = "select u from Usuario u where u.username='" + usuario.getUsername() + "' and u.password='" + usuario.getPassword() + "'";
         IVentas<Usuario> dao = new UsuarioDao();
@@ -33,26 +33,24 @@ public class LoginController implements Serializable {
             Usuario u = dao.findVenta(query);
             if (u != null) {
                 if (u.getUsername().equals(usuario.getUsername()) && u.getPassword().equals(usuario.getPassword())) {
-                    ruta="pages/producto?faces-redirect=true";
+                    ruta = "pages/producto?faces-redirect=true";
                     FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("user", usuario);
-                    message=new FacesMessage(FacesMessage.SEVERITY_ERROR,"Bienvenido","Acceso concedido");
+                    message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Bienvenido", "Acceso concedido");
+                } else {
+                    message = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Error de Validacion", "Usuario o Pasword Incorrecto");
+                    ruta = "index";
                 }
-                else{
-                    message=new FacesMessage(FacesMessage.SEVERITY_ERROR,"Error de Validacion","Pasword Incorrecto");
-                    ruta="index";
-                }
-            }
-            else{
-                message=new FacesMessage(FacesMessage.SEVERITY_ERROR,"Error de Validacion","Pasword Incorrecto");
-                ruta="index";
+            } else {
+                message = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Error de Validacion", "Usuario o Pasword Incorrecto");
+                ruta = "index";
             }
         } catch (Exception e) {
-            message=new FacesMessage(FacesMessage.SEVERITY_ERROR,"Error de Validacion",e.getMessage());
-            ruta="index";
+            message = new FacesMessage(FacesMessage.SEVERITY_FATAL, "Error de Validacion", "Usuario o Pasword Incorrecto");
+            ruta = "index";
         }
         FacesContext.getCurrentInstance().addMessage(null, message);
         return ruta;
-                
+
     }
 
     public List<Usuario> getUsuarios() {

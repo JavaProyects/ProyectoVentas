@@ -4,11 +4,11 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
-public class VentasCervice<T> implements IVentas<T> {
+public abstract class VentasService<T> implements IVentas<T> {
 
     protected EntityManager em;
 
-    public VentasCervice() {
+    public VentasService() {
         em = VentasConexion.getInstancia().getFactory().createEntityManager();
     }
 
