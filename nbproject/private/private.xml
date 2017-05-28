@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/documentos/NetBeansProjects/ProyectoVentas/src/java/com/pablo/services/VentasConexion.java</file>
+            <file>file:/D:/documentos/NetBeansProjects/ProyectoVentas/src/java/com/pablo/services/IVentas.java</file>
+            <file>file:/D:/documentos/NetBeansProjects/ProyectoVentas/web/index.xhtml</file>
+            <file>file:/D:/documentos/NetBeansProjects/ProyectoVentas/web/templates/template.xhtml</file>
+            <file>file:/D:/documentos/NetBeansProjects/ProyectoVentas/src/java/com/pablo/dao/UsuarioDao.java</file>
+            <file>file:/D:/documentos/NetBeansProjects/ProyectoVentas/web/templates/menu.xhtml</file>
+            <file>file:/D:/documentos/NetBeansProjects/ProyectoVentas/src/java/com/pablo/controller/LoginController.java</file>
+            <file>file:/D:/documentos/NetBeansProjects/ProyectoVentas/web/pages/producto.xhtml</file>
+            <file>file:/D:/documentos/NetBeansProjects/ProyectoVentas/src/java/com/pablo/services/VentasCervice.java</file>
+            <file>file:/D:/documentos/NetBeansProjects/ProyectoVentas/web/pages/venta.xhtml</file>
+        </group>
+    </open-files>
+</project-private>
